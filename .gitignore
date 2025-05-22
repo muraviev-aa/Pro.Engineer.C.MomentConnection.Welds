@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/weld_connection/.idea
+/weld_connection/cmake-build-debug
+/weld_connection/resources/sqlite
