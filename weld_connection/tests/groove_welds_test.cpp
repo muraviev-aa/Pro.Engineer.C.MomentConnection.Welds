@@ -35,3 +35,22 @@ TEST(GrooveWeldsCalculatedAreaWeldMetalTest, AccuracyHundredths)
     ASSERT_NEAR(calculated_area_weld_metal(6.7, 115, 1), 2157.4, 0.01);
     ASSERT_NEAR(calculated_area_weld_metal(5.3, 155, 0), 2151.8, 0.01);
 }
+
+TEST(GrooveWeldsCalculatedAreaWeldMetalTest, WithOutputPlanks) {
+    // с выводными планками (k_lw = 1)
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(10.0, 20.0, 1), 2.8 * 10.0 * 20.0);
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(5.0, 15.0, 1), 2.8 * 5.0 * 15.0);
+}
+
+TEST(GrooveWeldsCalculatedAreaWeldMetalTest, WithoutOutputPlanks) {
+    // без выводных планок (k_lw = 0)
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(10.0, 20.0, 0), 2.8 * 10.0 * (20.0 - 10));
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(5.0, 15.0, 0), 2.8 * 5.0 * (15.0 - 10));
+}
+
+TEST(GrooveWeldsCalculatedAreaWeldMetalTest, EdgeCases) {
+    // крайние случаи
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(0.0, 20.0, 1), 0.0); // h = 0
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(10.0, 10.0, 1), 2.8 * 10.0 * 10.0); // lw = h
+    EXPECT_DOUBLE_EQ(calculated_area_weld_metal(10.0, 10.0, 0), 2.8 * 10.0 * (10.0 - 10)); // lw = h
+}
