@@ -29,6 +29,7 @@ target_include_directories(weld_connection_app PRIVATE include ${SQLITE_SRC_PATH
 target_sources(weld_connection_app PRIVATE
         ../src/fillet_welds.c
         ../src/groove_welds.c
+        ../src/min_yield_strength_60.c
         ../src/stress.c)
 
 add_subdirectory(tests)

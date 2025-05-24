@@ -7,6 +7,9 @@
   * @param k_lw [int] Флаг для определения расчетной длины св. шва (б/р):
   * k_lw = 1, используются выводные планки; k_lw = 0, выводные планки не используются.
   * @retval [double] Площадь сварного шва (мм^2).
+  *
+  * Проверка единиц измерения:
+  * [мм * мм] = [мм^2]
   */
 double calc_area_base_metal_groove(double h, double lw, int k_lw)
 {
@@ -20,6 +23,9 @@ double calc_area_base_metal_groove(double h, double lw, int k_lw)
   * @param k_lw [int] Флаг для определения расчетной длины св. шва (б/р):
   * k_lw = 1, используются выводные планки; k_lw = 0, выводные планки не используются.
   * @retval [double] Площадь сварного шва (мм^2).
+  *
+  * Проверка единиц измерения:
+  * [мм * мм] = [мм^2]
   */
 double calc_area_weld_metal_groove(double h, double lw, int k_lw)
 {

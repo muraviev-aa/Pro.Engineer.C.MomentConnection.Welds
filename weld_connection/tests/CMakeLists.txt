@@ -4,6 +4,7 @@ add_executable(weld_connection_tests
         groove_welds_test.cpp
         sqlite_test.cpp
         stress_test.cpp
+        min_yield_strength_test_60.cpp
         main_test.cpp
 )
 
@@ -24,4 +25,5 @@ target_compile_definitions(weld_connection_tests PRIVATE RESOURCE_PATH="${RESOUR
 target_sources(weld_connection_tests PRIVATE
         ../src/fillet_welds.c
         ../src/groove_welds.c
+        ../src/min_yield_strength_60.c
         ../src/stress.c)
