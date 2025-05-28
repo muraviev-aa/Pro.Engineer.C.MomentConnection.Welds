@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.40.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="main_window">
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkFixed" id="main_fixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkStack" id="main_stack">
+            <property name="width-request">655</property>
+            <property name="height-request">341</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkFixed" id="fixed1">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkImage" id="image1">
+                    <property name="width-request">345</property>
+                    <property name="height-request">274</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="stock">gtk-missing-image</property>
+                  </object>
+                  <packing>
+                    <property name="x">23</property>
+                    <property name="y">20</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="section_beam">
+                    <property name="label" translatable="yes">Сечение балки</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">475</property>
+                    <property name="y">135</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page0</property>
+                <property name="title" translatable="yes">Сечение</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed2">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+              </object>
+              <packing>
+                <property name="name">page1</property>
+                <property name="title" translatable="yes">Материалы</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed3">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="label" translatable="yes">Расчет</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">True</property>
+                  </object>
+                  <packing>
+                    <property name="x">458</property>
+                    <property name="y">119</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page2</property>
+                <property name="title" translatable="yes">60% нес. способности</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed4">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+              </object>
+              <packing>
+                <property name="name">page3</property>
+                <property name="title" translatable="yes">Неполный провар</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="fixed5">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+              </object>
+              <packing>
+                <property name="name">page4</property>
+                <property name="title" translatable="yes">Угловой шов</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">8</property>
+            <property name="y">37</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStackSwitcher" id="main_swicher">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="stack">main_stack</property>
+          </object>
+          <packing>
+            <property name="x">7</property>
+            <property name="y">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

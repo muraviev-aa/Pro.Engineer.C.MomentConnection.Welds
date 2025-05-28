@@ -12,7 +12,7 @@ TEST(FlangeDesignedStrengthTest, AccuracyHundredths)
 // Тестируем функцию designed_shear_60
 TEST(WallDesignedShearTest, AccuracyHundredths)
 {
-    double r_s = stress_shear_metal(300);
+    double r_s = stress_shear_metal(315);
     // Двутавр 70Ш8
-    ASSERT_NEAR(designed_shear_60(r_s, 38, 64, 780), 2586614.4, 0.01);
+    ASSERT_NEAR(designed_shear_60(r_s, 38, 64, 780), 2715945.12, 0.01);
 }
