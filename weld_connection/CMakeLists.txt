@@ -4,6 +4,19 @@ cmake_policy(SET CMP0135 NEW)
 
 project(Weld_connection)
 
+# Добавляем GTK
+set(CMAKE_C_STANDARD 11)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GTK REQUIRED gtk+-3.0)
+pkg_check_modules(Cairo REQUIRED cairo)
+pkg_check_modules(Pango REQUIRED pango)
+
+include_directories(${GTK_INCLUDE_DIRS})
+link_directories(${GTK_LIBRARY_DIRS})
+link_libraries(${GTK_LIBRARIES})
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+#
+
 include(FetchContent)
 
 # Подключение googletest

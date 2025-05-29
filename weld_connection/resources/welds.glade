@@ -2,14 +2,14 @@
 <!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkWindow" id="main_window">
+  <object class="GtkWindow" id="window_main">
     <property name="can-focus">False</property>
     <child>
-      <object class="GtkFixed" id="main_fixed">
+      <object class="GtkFixed" id="fixed_main">
         <property name="visible">True</property>
         <property name="can-focus">False</property>
         <child>
-          <object class="GtkStack" id="main_stack">
+          <object class="GtkStack" id="stack_main">
             <property name="width-request">655</property>
             <property name="height-request">341</property>
             <property name="visible">True</property>
@@ -112,10 +112,10 @@
           </packing>
         </child>
         <child>
-          <object class="GtkStackSwitcher" id="main_swicher">
+          <object class="GtkStackSwitcher" id="swicher_main">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="stack">main_stack</property>
+            <property name="stack">stack_main</property>
           </object>
           <packing>
             <property name="x">7</property>
