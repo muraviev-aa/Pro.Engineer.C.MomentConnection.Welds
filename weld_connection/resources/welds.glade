@@ -3,6 +3,8 @@
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkWindow" id="window_main">
+    <property name="width-request">500</property>
+    <property name="height-request">400</property>
     <property name="can-focus">False</property>
     <child>
       <object class="GtkFixed" id="fixed_main">
@@ -24,11 +26,11 @@
                     <property name="height-request">274</property>
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
-                    <property name="stock">gtk-missing-image</property>
+                    <property name="pixbuf">scheme.png</property>
                   </object>
                   <packing>
                     <property name="x">23</property>
-                    <property name="y">20</property>
+                    <property name="y">1</property>
                   </packing>
                 </child>
                 <child>
@@ -39,8 +41,41 @@
                     <property name="receives-default">True</property>
                   </object>
                   <packing>
-                    <property name="x">475</property>
-                    <property name="y">135</property>
+                    <property name="x">493</property>
+                    <property name="y">324</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_section">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Выберите сечение балки</property>
+                  </object>
+                  <packing>
+                    <property name="x">234</property>
+                    <property name="y">191</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_thickness_flange">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Толщина полки</property>
+                  </object>
+                  <packing>
+                    <property name="x">506</property>
+                    <property name="y">6</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label_width_flange">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Ширина полки</property>
+                  </object>
+                  <packing>
+                    <property name="x">510</property>
+                    <property name="y">73</property>
                   </packing>
                 </child>
               </object>
@@ -79,7 +114,7 @@
               </object>
               <packing>
                 <property name="name">page2</property>
-                <property name="title" translatable="yes">60% нес. способности</property>
+                <property name="title" translatable="yes">60% нес. спос.</property>
                 <property name="position">2</property>
               </packing>
             </child>
@@ -118,7 +153,7 @@
             <property name="stack">stack_main</property>
           </object>
           <packing>
-            <property name="x">7</property>
+            <property name="x">22</property>
             <property name="y">3</property>
           </packing>
         </child>
