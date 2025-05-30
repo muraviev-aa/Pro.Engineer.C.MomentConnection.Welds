@@ -1,0 +1,27 @@
+.stack-switcher {
+    background-color: #007acc; /* Синий фон для неактивных элементов */
+    color: rgb(14, 0, 0); /* Цвет текста */
+    border: none; /* Убираем бордер */
+    border-radius: 2px; /* Закругленные углы */
+    padding: 2px; /* Отступы внутри кнопки */
+}
+
+.stack-switcher button {
+    color: black; /* Черный текст для кнопок */
+    border: none; /* Убираем бордер у кнопок */
+    border-radius: 2px; /* Закругленные углы кнопок */
+    padding: 5px 10px; /* Отступы внутри кнопки */
+    margin-right: 2px; /* Зазор между кнопками (можно изменить значение) */
+}
+
+.stack-switcher button:focus {
+   outline: none; /* Убираем стандартный обвод вокруг кнопки при фокусе */
+}
+
+.stack-switcher button:last-child {
+    margin-right: 0; /* Убираем правый отступ у последней кнопки */
+}
+
+.stack-switcher button:hover {
+    background-color: #005f99; /* Темно-синий фон при наведении */
+}

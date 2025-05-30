@@ -40,6 +40,7 @@ target_compile_definitions(weld_connection_app PRIVATE RESOURCE_PATH="${RESOURCE
 target_include_directories(weld_connection_app PRIVATE include ${SQLITE_SRC_PATH})
 
 target_sources(weld_connection_app PRIVATE
+        ../src/temp_function.c
         ../src/fillet_welds.c
         ../src/groove_welds.c
         ../src/min_yield_strength_60.c
