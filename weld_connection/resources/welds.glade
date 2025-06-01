@@ -67,11 +67,14 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton" id="section_beam">
+                  <object class="GtkButton" id="button_section_beam">
                     <property name="label" translatable="yes">Сечение балки</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
+                    <style>
+                      <class name="button"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="x">493</property>
@@ -152,11 +155,7 @@
             <property name="can-focus">False</property>
             <property name="stack">stack_main</property>
             <style>
-              <class name=".stack-switcher"/>
-              <class name=".stack-switcher button"/>
-              <class name=".stack-switcher button:focus"/>
-              <class name=".stack-switcher button:hover"/>
-              <class name=".stack-switcher button:last-child"/>
+              <class name="stack-switcher"/>
             </style>
           </object>
           <packing>
@@ -166,5 +165,8 @@
         </child>
       </object>
     </child>
+    <style>
+      <class name="window"/>
+    </style>
   </object>
 </interface>

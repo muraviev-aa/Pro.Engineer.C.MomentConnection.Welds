@@ -9,6 +9,7 @@
 
 GtkBuilder *builder;
 GtkWidget *window_main;
+GtkWidget *button_section_beam;
 
 // Функции для интерфейса
 gboolean LoadFromPath(GtkCssProvider *provider, const gchar *path, GError **error)
@@ -47,6 +48,8 @@ int main(int argc, char **argv)
     gtk_window_set_title(GTK_WINDOW(window_main), "Расчет сварного шва приварки балки 1.0");
     gtk_window_set_icon_from_file(GTK_WINDOW(window_main), "resources/ant.gif", NULL);
     gtk_window_set_resizable(GTK_WINDOW(window_main), FALSE);
+
+    button_section_beam = GTK_WIDGET(gtk_builder_get_object(builder, "button_section_beam"));
 
     // работа с *.css файлом
     apply_css(&interface, provider, cssPath, &error); // передаем интерфейс как первый аргумент
